@@ -9,7 +9,7 @@ trigger:
 pool:
   #vmImage: ubuntu-latest
 #  name: default
-  name: Hosted Agent
+  name: 'Hosted Agent'
 
 steps:
 - script: echo Hello, world!
