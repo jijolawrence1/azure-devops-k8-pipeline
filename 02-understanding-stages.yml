@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: Default
+  name: default
 
 stages:
 - stage: Build
@@ -25,9 +25,9 @@ stages:
     - bash: echo $(Build.ArtifactStagingDirectory)
     - bash: java -version
     - bash: node --version
-    - bash: python --version 
-    - bash: mvn -version 
-    - bash: ls -R $(Build.ArtifactStagingDirectory)
+  #  - bash: python --version
+  #  - bash: mvn -version
+  #  - bash: ls -R $(Build.ArtifactStagingDirectory)
     - task: CopyFiles@2
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
